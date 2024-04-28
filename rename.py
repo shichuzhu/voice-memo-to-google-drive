@@ -57,7 +57,7 @@ def rename_via_metadata(src_path: Path):
     week_number = east_time.isocalendar().week
     dst_path = Path(to_path(year, week_number), f"{new_filename} {src_path.name}")
     assert src_path.is_file()
-    assert not dst_path.is_file()  # Expect the file is not already there.
+    assert not dst_path.is_file(), f"Expect the file {dst_path} is not already there"
     dst_path.parent.mkdir(parents=True, exist_ok=True)
     print(f"     moving {src_path} -> {dst_path}")
     shutil.copy(src_path, dst_path)
