@@ -10,13 +10,15 @@ from ffprobe import FFProbe
 ICLOUD_DRIVE = "d"
 ICLOUD_RELPATH = "data/icloud/iCloudDrive/VoiceMemoBackup"
 
+# A few options of where to store the data.
 # to path root: G:\My Drive\Recordings
 # RIP Google Drive.. C:\Users\shich\Box\PERSONAL
 # box needs to run this command first
 # sudo mount -t drvfs 'C:\Users\shich\Box' /mnt/box -o uid=1000,gid=1000
 # https://github.com/microsoft/WSL/issues/4310#issuecomment-1508981783
-GOOGLE_DRIVE = "box"
-GDRIVE_RELPATH = "PERSONAL/Recordings"
+# Currently store to local disk.
+GOOGLE_DRIVE = "D"
+GDRIVE_RELPATH = "data/backup/local_data/Recordings"
 
 
 def from_path() -> Path:
@@ -32,7 +34,7 @@ def to_path_root() -> Path:
     if os.name == "nt":  # windows
         root_disk = Path(f"{GOOGLE_DRIVE}:")
     else:  # posix
-        root_disk = Path(f"/mnt/{GOOGLE_DRIVE}")
+        root_disk = Path(f"/mnt/{GOOGLE_DRIVE.lower()}")
     rel_path = GDRIVE_RELPATH.split("/")
     return Path(root_disk, *rel_path)
 

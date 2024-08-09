@@ -8,11 +8,11 @@ ROOT_RELPATH = "Users/shich/Desktop/tmp"
 # TODO: This may not be true if iTools imports without specifying 'monthly'??????????????????????????????????
 # Filename looks like 20240704_IMG_2250.MOV, whose prefix is added by iTools.
 ITOOLSEXPORTEDPATH = (
-    "itools/2024_07"  # <------ DOUBLE CHECK this path!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    "itools/iTools Photos"  # <------ DOUBLE CHECK this path!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 )
 ICLOUDCOPIEDPATH = "iphone"
 
-# C:\Users\shich\Desktop\tmp\itools\2024_07 -- itool exported
+# C:\Users\shich\Desktop\tmp\itools\iTools Photos -- itool exported
 # C:\Users\shich\Desktop\tmp\iphone -- icloud copied
 
 
