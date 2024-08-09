@@ -11,8 +11,12 @@ ICLOUD_DRIVE = "d"
 ICLOUD_RELPATH = "data/icloud/iCloudDrive/VoiceMemoBackup"
 
 # to path root: G:\My Drive\Recordings
-GOOGLE_DRIVE = "g"
-GDRIVE_RELPATH = "My Drive/Recordings"
+# RIP Google Drive.. C:\Users\shich\Box\PERSONAL
+# box needs to run this command first
+# sudo mount -t drvfs 'C:\Users\shich\Box' /mnt/box -o uid=1000,gid=1000
+# https://github.com/microsoft/WSL/issues/4310#issuecomment-1508981783
+GOOGLE_DRIVE = "box"
+GDRIVE_RELPATH = "PERSONAL/Recordings"
 
 
 def from_path() -> Path:
